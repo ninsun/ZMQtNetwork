@@ -13,10 +13,17 @@ TEMPLATE = lib
 
 DEFINES += ZMQTNETWORK_LIBRARY
 
-SOURCES += ZMQtNetwork.cpp
+SOURCES += ZMQtNetwork.cpp \
+    ZMQtSocket.cpp \
+    ZMQtMessage.cpp \
+    ZMQtContext.cpp
 
 HEADERS += ZMQtNetwork.h\
-        zmqtnetwork_global.h
+        zmqtnetwork_global.h \
+    ZMQtSocket.h \
+    ZMQtMessage.h \
+    ZMQtContext.h \
+    ZMQtType.h
 
 unix:!symbian {
     maemo5 {
