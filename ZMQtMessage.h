@@ -48,18 +48,12 @@ namespace ZMQtNetwork
         void clear() { m_messageList.clear(); }
 
     public:
-        //! 通过socket发送消息队列中的消息
-        //! 返回0表示成功, 返回1表示发送队列已满, 负值表示失败
-        int send(ZMQtSocket *socket, int flags=0);
-        //! 通过socket接受消息, 放置到消息队列中
-        //! 返回0表示成功, 返回1表示暂无消息, 负值表示失败
-        int recv(ZMQtSocket *socket, int flags=0);
-
-    public:
         //! 获取消息队列中index位置的数据
         QByteArray message(int index) { return m_messageList.value(index); }
         //! 获取消息队列中数据的个数
         int count() { return m_messageList.size(); }
+        //! 获取整个消息列表
+        const QList<QByteArray> & messageList() const { return m_messageList; }
 
     private:
         QList<QByteArray> m_messageList;

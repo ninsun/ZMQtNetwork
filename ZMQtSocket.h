@@ -38,6 +38,7 @@ namespace ZMQtNetwork
     //! 如需在不同线程中处理请自行处理线程同步
     class ZMQTNETWORKSHARED_EXPORT ZMQtSocket
     {
+
     public:
         //! 创建一个新的socket, 需要手动打开
         ZMQtSocket();
@@ -62,14 +63,18 @@ namespace ZMQtNetwork
         int getsockopt(int optName, void *optValue, size_t *optLength);
 
     public:
-        //! 发送消息
-        int sendmsg(ZMQtMessage *msg, int flags=0);
-        //! 接收消息
+        //! 发送ZMQtMessage中的全部消息
+        //! 返回0表示成功, 返回1表示发送队列已满, 负值表示失败
+        int sendmsg(const ZMQtMessage &msg, int flags=0);
+        //! 接受消息，逐条放置在ZMQtMessage中
+        //! 返回0表示成功, 返回1表示暂无消息, 负值表示失败
         int recvmsg(ZMQtMessage *msg, int flags=0);
 
         //! 直接发送缓冲区中的数据
+        //! 返回真正发送的字节数量
         int send(const void *buf, size_t len, int flags = 0);
         //! 向缓冲区中读取数据
+        //! 返回真正接受的字节数量
         int recv(void *buf, size_t len, int flags = 0);
 
     private:
