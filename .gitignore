@@ -6,8 +6,9 @@
 *.a
 *.la
 *.lai
-*.so
 *.dll
+*.so
+*.so.*
 *.dylib
 
 # Qt-es
@@ -18,3 +19,4 @@ moc_*.cpp
 qrc_*.cpp
 Makefile
 *-build-*
+*build-*
