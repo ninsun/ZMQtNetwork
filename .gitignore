@@ -20,3 +20,4 @@ qrc_*.cpp
 Makefile
 *-build-*
 *build-*
+*~
