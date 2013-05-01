@@ -17,10 +17,10 @@
  *
  */
 
-#include "ZMQtSocket.h"
-#include "ZMQtContext.h"
-#include "ZMQtMessage.h"
-#include "ZMQtType.h"
+#include "ZMQtNetwork/ZMQtSocket.h"
+#include "ZMQtNetwork/ZMQtContext.h"
+#include "ZMQtNetwork/ZMQtMessage.h"
+#include "ZMQtNetwork/ZMQtType.h"
 
 #include <QtCore/QDebug>
 

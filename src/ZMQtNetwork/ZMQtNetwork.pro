@@ -11,11 +11,11 @@ SOURCES += \
     ZMQtMessage.cpp \
     ZMQtContext.cpp
 
-HEADERS += \
-    ../../inc/ZMQtType.h \
-    ../../inc/ZMQtSocket.h \
-    ../../inc/zmqtnetwork_global.h \
-    ../../inc/ZMQtMessage.h \
-    ../../inc/ZMQtContext.h
-
 unix|win32: LIBS += -lzmq
+
+HEADERS += \
+    ../../inc/ZMQtNetwork/ZMQtType.h \
+    ../../inc/ZMQtNetwork/ZMQtSocket.h \
+    ../../inc/ZMQtNetwork/zmqtnetwork_global.h \
+    ../../inc/ZMQtNetwork/ZMQtMessage.h \
+    ../../inc/ZMQtNetwork/ZMQtContext.h

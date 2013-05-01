@@ -17,8 +17,8 @@
  *
  */
 
-#include "ZMQtMessage.h"
-#include "ZMQtSocket.h"
+#include "ZMQtNetwork/ZMQtMessage.h"
+#include "ZMQtNetwork/ZMQtSocket.h"
 
 #include <QtCore/QDebug>
 

@@ -17,7 +17,7 @@
  *
  */
 
-#include "ZMQtContext.h"
+#include "ZMQtNetwork/ZMQtContext.h"
 
 #include <QtCore/QDebug>
 
