@@ -297,7 +297,7 @@ namespace ZMQtNetwork
     {
         if(m_pSocket)
         {
-            return m_pSocket->send(buf, len,flags);
+            return m_pSocket->send(buf, len, flags);
         }
         else
         {
@@ -310,7 +310,7 @@ namespace ZMQtNetwork
     {
         if(m_pSocket)
         {
-            return m_pSocket->recv(buf, len,flags);
+            return m_pSocket->recv(buf, len, flags);
         }
         else
         {

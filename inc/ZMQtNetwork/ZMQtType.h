@@ -20,7 +20,7 @@
 #ifndef ZMQtNetwork_ZMQtType_h__
 #define ZMQtNetwork_ZMQtType_h__
 
-#include <zmq.h>
+#include <zmq.hpp>
 
 #ifndef ZMQ_HWM
 #define ZMQ_HWM -1000
