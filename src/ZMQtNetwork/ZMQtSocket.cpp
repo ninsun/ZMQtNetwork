@@ -243,6 +243,7 @@ namespace ZMQtNetwork
     {
         if (m_pSocket)
         {
+            msg->clear();
             QByteArray _data;
             zmq::message_t _msg;
             bool _success = false;
