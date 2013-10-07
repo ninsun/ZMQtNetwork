@@ -247,10 +247,13 @@ namespace ZMQtNetwork
             QByteArray _data;
             zmq::message_t _msg;
             bool _success = false;
+#if (ZMQ_VERSION_MAJOR == 3)
             int _more = 0;
-            quint64 _more64 = 0;
             size_t _more_size = sizeof(_more);
+#else
+            quint64 _more64 = 0;
             size_t _more64_size = sizeof(_more64);
+#endif
             try
             {
                 do

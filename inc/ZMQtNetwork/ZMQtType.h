@@ -37,7 +37,7 @@
 
 namespace ZMQtNetwork
 {
-    char* getTypeName(int type)
+    const char* getTypeName(int type)
     {
         switch(type)
         {
@@ -68,7 +68,7 @@ namespace ZMQtNetwork
         }
     }
 
-    char* getSockoptName(int opt)
+    const char* getSockoptName(int opt)
     {
         switch(opt)
         {
